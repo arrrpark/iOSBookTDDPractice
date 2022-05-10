@@ -27,15 +27,24 @@ class DetailBookViewModel: DetailBookProtocol {
     }
     
     func isBookmarked(_ isbn13: String?) -> Bool {
-        return false
+        guard let isbn13 = isbn13 else { return false }
+        return BookmarkDAO.shared.findABook(isbn13) != nil
     }
     
     func addBookmark(_ book: Book) -> Bool {
-        return false
+        var books = Global.bookmarks.value
+        books.append(book)
+        Global.bookmarks.send(books)
+        return BookmarkDAO.shared.addBookmark(book)
     }
     
     func cancelBookmark(_ isbn13: String?) -> Bool {
-        return false
+        var books = Global.bookmarks.value
+        if let index = books.firstIndex(where: { $0.isbn13 == isbn13 }) {
+            books.remove(at: index)
+            Global.bookmarks.send(books)
+        }
+        return BookmarkDAO.shared.cancelBookmark(isbn13)
     }
     
     func getBookDetail() -> Future<BookDetail, NetworkError> {

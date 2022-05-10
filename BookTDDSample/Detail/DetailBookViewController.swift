@@ -94,10 +94,11 @@ class DetailBookViewController: AppbaseViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .darkGray
         $0.isHidden = true
+        $0.publisher(for: .touchUpInside).sink(receiveCompletion: { _ in
+        }, receiveValue: { [weak self] _ in
+            self?.onBookmarkPressed()
+        }).store(in: &cancelBag)
         
-//        $0.rx.tap.bind { [weak self] in
-//            self?.onBookmarkPressed()
-//        }.disposed(by: disposeBag)
     }
     
     init(detailBookViewModel: DetailBookProtocol) {
@@ -254,6 +255,18 @@ class DetailBookViewController: AppbaseViewController {
         descLabel.text = bookDetail.desc
         if let price = bookDetail.price { priceLabel.text = "price : \(price)" }
         bookmarkButton.isHidden = false
+    }
+    
+    func onBookmarkPressed() {
+        if detailBookViewModel.isBookmarked(detailBookViewModel.book.isbn13) {
+            if detailBookViewModel.cancelBookmark(detailBookViewModel.book.isbn13) {
+                bookmarkButton.setTitle("Bookmark", for: .normal)
+            }
+        } else {
+            if detailBookViewModel.addBookmark(detailBookViewModel.book) {
+                bookmarkButton.setTitle("Cancel bookmark", for: .normal)
+            }
+        }
     }
 }
     

@@ -11,6 +11,7 @@ target 'BookTDDSample' do
   pod 'Kingfisher', '7.2.1'
   pod 'Alamofire', '5.6.1'
   pod 'ObjectMapper', '4.2.0'
+  pod 'FMDB', '2.7.5'
 
   target 'BookTDDSampleTests' do
     inherit! :search_paths
