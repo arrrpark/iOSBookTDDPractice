@@ -1,4 +1,4 @@
-# BookTDDSample
+# BookTDDPractice
 
 This project is to practice test-driven-development with iOS.</br>
 Most of the project will be developed with TDD approach, but not all. </br>
