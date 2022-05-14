@@ -2,7 +2,7 @@
 
 This project is to practice test-driven-development with iOS.</br>
 Most of the project will be developed with TDD approach, but not all. </br>
-Some asepects that can't be tested through XCTest will be done so by XCUIText </br>
+Some asepects that can't be tested through XCTest will be done so by XCUITest </br>
 ex) Colleciton view cell will display
 
 Specifications are as follows.
