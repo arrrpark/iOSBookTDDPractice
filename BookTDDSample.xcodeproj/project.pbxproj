@@ -34,9 +34,10 @@
 		0A79C2B7282940CE004AB462 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79C2B6282940CE004AB462 /* BookDetail.swift */; };
 		0A79C2BA28295FEA004AB462 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79C2B928295FEA004AB462 /* UIButton+extension.swift */; };
 		0A79C2BC28295FFF004AB462 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79C2BB28295FFF004AB462 /* UIImage+Extension.swift */; };
-		0A9B6034282AA64E009CB1F8 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9B6033282AA64E009CB1F8 /* BookmarkViewModel.swift */; };
 		0A9B6036282AA690009CB1F8 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9B6035282AA690009CB1F8 /* Global.swift */; };
 		0A9B6038282AA724009CB1F8 /* BookmarkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9B6037282AA724009CB1F8 /* BookmarkDAO.swift */; };
+		0AB1D462282CE9BD0067832B /* BookmarkViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */; };
+		0AB1D464282CEA330067832B /* BookmarkCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1D463282CEA330067832B /* BookmarkCollectionView.swift */; };
 		87F0062A09C419AFFAFFF6A8 /* Pods_BookTDDSample_BookTDDSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA7C0D4C34169C2FB6D81AC /* Pods_BookTDDSample_BookTDDSampleUITests.framework */; };
 		B9B710B3F1B698306E82404E /* Pods_BookTDDSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1FB6216F697F8881A92D4A /* Pods_BookTDDSampleTests.framework */; };
 		DB239C02BB36C99618E62E0D /* Pods_BookTDDSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A423D8EB557374540E60EB /* Pods_BookTDDSample.framework */; };
@@ -91,9 +92,10 @@
 		0A79C2B6282940CE004AB462 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		0A79C2B928295FEA004AB462 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		0A79C2BB28295FFF004AB462 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		0A9B6033282AA64E009CB1F8 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		0A9B6035282AA690009CB1F8 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		0A9B6037282AA724009CB1F8 /* BookmarkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDAO.swift; sourceTree = "<group>"; };
+		0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewControllerTests.swift; sourceTree = "<group>"; };
+		0AB1D463282CEA330067832B /* BookmarkCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionView.swift; sourceTree = "<group>"; };
 		671FEB767FA53BE69A85F8C8 /* Pods-BookTDDSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSampleTests.release.xcconfig"; path = "Target Support Files/Pods-BookTDDSampleTests/Pods-BookTDDSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8438BEA856D11A5A5235B0D2 /* Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookTDDSample-BookTDDSampleUITests/Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92E555DE7DF4CFD86FD735A7 /* Pods-BookTDDSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-BookTDDSampleTests/Pods-BookTDDSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				0A42C6512827ED2700531293 /* MainTabBarViewControllerTests.swift */,
 				0A42C6742828054D00531293 /* SearchBookViewControllerTests.swift */,
 				0A79C2AF28291F2B004AB462 /* DetailBookViewControllerTests.swift */,
+				0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */,
 			);
 			path = BookTDDSampleTests;
 			sourceTree = "<group>";
@@ -241,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				0A42C66E2827F1EF00531293 /* BookmarkViewController.swift */,
-				0A9B6033282AA64E009CB1F8 /* BookmarkViewModel.swift */,
+				0AB1D463282CEA330067832B /* BookmarkCollectionView.swift */,
 				0A9B6037282AA724009CB1F8 /* BookmarkDAO.swift */,
 			);
 			path = Bookmark;
@@ -511,7 +514,6 @@
 				0A42C66D2827F1D200531293 /* SearchBookViewController.swift in Sources */,
 				0A60F7D028282783001625D6 /* SearchBookCollectionView.swift in Sources */,
 				0A42C679282806D800531293 /* SearchBookViewModel.swift in Sources */,
-				0A9B6034282AA64E009CB1F8 /* BookmarkViewModel.swift in Sources */,
 				0A42C67F282807BF00531293 /* AlamofireWrapper.swift in Sources */,
 				0A79C2BA28295FEA004AB462 /* UIButton+extension.swift in Sources */,
 				0A9B6036282AA690009CB1F8 /* Global.swift in Sources */,
@@ -528,6 +530,7 @@
 				0A42C63F2827ED2300531293 /* MainTabBarViewController.swift in Sources */,
 				0A42C63B2827ED2300531293 /* AppDelegate.swift in Sources */,
 				0A42C66F2827F1EF00531293 /* BookmarkViewController.swift in Sources */,
+				0AB1D464282CEA330067832B /* BookmarkCollectionView.swift in Sources */,
 				0A79C2AE28291BA9004AB462 /* UIControlSubscription.swift in Sources */,
 				0A42C63D2827ED2300531293 /* SceneDelegate.swift in Sources */,
 				0A79C2B528293B51004AB462 /* DetailBookViewModel.swift in Sources */,
@@ -538,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB1D462282CE9BD0067832B /* BookmarkViewControllerTests.swift in Sources */,
 				0A79C2B028291F2B004AB462 /* DetailBookViewControllerTests.swift in Sources */,
 				0A42C6522827ED2700531293 /* MainTabBarViewControllerTests.swift in Sources */,
 				0A42C6752828054D00531293 /* SearchBookViewControllerTests.swift in Sources */,
