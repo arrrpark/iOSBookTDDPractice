@@ -37,6 +37,7 @@
 		0A9B6038282AA724009CB1F8 /* BookmarkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9B6037282AA724009CB1F8 /* BookmarkDAO.swift */; };
 		0AB1D462282CE9BD0067832B /* BookmarkViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */; };
 		0AB1D464282CEA330067832B /* BookmarkCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1D463282CEA330067832B /* BookmarkCollectionView.swift */; };
+		0AB9298B2831B50800018AF5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB9298A2831B50700018AF5 /* Common.swift */; };
 		87F0062A09C419AFFAFFF6A8 /* Pods_BookTDDSample_BookTDDSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA7C0D4C34169C2FB6D81AC /* Pods_BookTDDSample_BookTDDSampleUITests.framework */; };
 		B9B710B3F1B698306E82404E /* Pods_BookTDDSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1FB6216F697F8881A92D4A /* Pods_BookTDDSampleTests.framework */; };
 		DB239C02BB36C99618E62E0D /* Pods_BookTDDSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A423D8EB557374540E60EB /* Pods_BookTDDSample.framework */; };
@@ -94,6 +95,7 @@
 		0A9B6037282AA724009CB1F8 /* BookmarkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDAO.swift; sourceTree = "<group>"; };
 		0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewControllerTests.swift; sourceTree = "<group>"; };
 		0AB1D463282CEA330067832B /* BookmarkCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionView.swift; sourceTree = "<group>"; };
+		0AB9298A2831B50700018AF5 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		671FEB767FA53BE69A85F8C8 /* Pods-BookTDDSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSampleTests.release.xcconfig"; path = "Target Support Files/Pods-BookTDDSampleTests/Pods-BookTDDSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8438BEA856D11A5A5235B0D2 /* Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookTDDSample-BookTDDSampleUITests/Pods-BookTDDSample-BookTDDSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92E555DE7DF4CFD86FD735A7 /* Pods-BookTDDSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTDDSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-BookTDDSampleTests/Pods-BookTDDSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				0A42C6742828054D00531293 /* SearchBookViewControllerTests.swift */,
 				0A79C2AF28291F2B004AB462 /* DetailBookViewControllerTests.swift */,
 				0AB1D461282CE9BD0067832B /* BookmarkViewControllerTests.swift */,
+				0AB9298A2831B50700018AF5 /* Common.swift */,
 			);
 			path = BookTDDSampleTests;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				0A79C2B028291F2B004AB462 /* DetailBookViewControllerTests.swift in Sources */,
 				0A42C6522827ED2700531293 /* MainTabBarViewControllerTests.swift in Sources */,
 				0A42C6752828054D00531293 /* SearchBookViewControllerTests.swift in Sources */,
+				0AB9298B2831B50800018AF5 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,9 +45,9 @@ class BookmarkViewControllerTests: XCTestCase {
         
         var expectations: [XCTestExpectation] = []
         
-        MockDetailBookViewModel.bookmarks.value.indices.forEach { index in
+        FakeData.bookmarks.value.indices.forEach { index in
             let cell = bookmarkCollectionView.dequeueReusableCell(withReuseIdentifier: String(describing: BookCell.self), for: IndexPath(row: index, section: 0)) as! BookCell
-            let book = MockDetailBookViewModel.bookmarks.value[index]
+            let book = FakeData.bookmarks.value[index]
             
             cell.configWithBook(book)
             XCTAssertTrue(cell.titleLabel.text == book.title)
@@ -83,10 +83,10 @@ class BookmarkViewControllerTests: XCTestCase {
         
         let navigationController = MockNavigationController(rootViewController: bookmarkViewController)
         
-        MockDetailBookViewModel.bookmarks.value.indices.forEach { index in
+        FakeData.bookmarks.value.indices.forEach { index in
             let cell = bookmarkCollectionView.dequeueReusableCell(withReuseIdentifier: String(describing: BookCell.self), for: IndexPath(row: index, section: 0)) as! BookCell
             
-            cell.configWithBook(MockDetailBookViewModel.bookmarks.value[index])
+            cell.configWithBook(FakeData.bookmarks.value[index])
         }
         
         bookmarkCollectionView.collectionView(bookmarkCollectionView, didSelectItemAt: IndexPath(row: 0, section: 0))
@@ -97,7 +97,7 @@ class BookmarkViewControllerTests: XCTestCase {
 
 class MockBookmarkViewController: BookmarkViewController {
     override func bookmarkCollectionView(_ collectionView: BookmarkCollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailBookViewModel = DetailBookViewModel(book: MockDetailBookViewModel.bookmarks.value[indexPath.row])
+        let detailBookViewModel = DetailBookViewModel(book: FakeData.bookmarks.value[indexPath.row])
         let controller = DetailBookViewController(detailBookViewModel: detailBookViewModel)
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -105,7 +105,7 @@ class MockBookmarkViewController: BookmarkViewController {
 
 class MockBookmarkCollectionView: BookmarkCollectionView {
     override func numberOfItems(inSection section: Int) -> Int {
-        return MockDetailBookViewModel.bookmarks.value.count
+        return FakeData.bookmarks.value.count
     }
     
     override func cellForItem(at indexPath: IndexPath) -> UICollectionViewCell? {
@@ -113,7 +113,7 @@ class MockBookmarkCollectionView: BookmarkCollectionView {
             return UICollectionViewCell()
         }
         
-        let data = MockDetailBookViewModel.bookmarks.value[indexPath.item]
+        let data = FakeData.bookmarks.value[indexPath.item]
         cell.configWithBook(data)
         return cell
     }
