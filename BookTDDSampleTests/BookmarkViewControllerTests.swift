@@ -10,7 +10,6 @@ import Combine
 import Alamofire
 import Kingfisher
 @testable import BookTDDSample
-import SwiftUI
 
 class BookmarkViewControllerTests: XCTestCase {
     var bookmarkViewController: BookmarkViewController!
