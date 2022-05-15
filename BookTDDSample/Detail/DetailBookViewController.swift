@@ -22,6 +22,7 @@ class DetailBookViewController: AppbaseViewController {
     }
     
     lazy var backButton = UIButton().setImageButton(UIImage(systemName: "arrow.left")).then {
+        $0.accessibilityLabel = "detailBack"
         $0.publisher(for: .touchUpInside).sink(receiveCompletion: { _ in
         }, receiveValue: { [weak self] _ in
             self?.onBackPressed()
@@ -66,6 +67,7 @@ class DetailBookViewController: AppbaseViewController {
     lazy var isbn13Label = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 12)
+        $0.accessibilityLabel = "detailIsbn13Label"
     }
     
     lazy var pagesLabel = UILabel().then {
@@ -90,10 +92,15 @@ class DetailBookViewController: AppbaseViewController {
     }
     
     lazy var bookmarkButton = UIButton().then {
-        $0.setTitle("Bookmark", for: .normal)
+        if !detailBookViewModel.isBookmarked(detailBookViewModel.book.isbn13) {
+            $0.setTitle("Bookmark", for: .normal)
+        } else {
+            $0.setTitle("Cancel Bookmark", for: .normal)
+        }
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .darkGray
         $0.isHidden = true
+        $0.accessibilityLabel = "detailBookmark"
         $0.publisher(for: .touchUpInside).sink(receiveCompletion: { _ in
         }, receiveValue: { [weak self] _ in
             self?.onBookmarkPressed()

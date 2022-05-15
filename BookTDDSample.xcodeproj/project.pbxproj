@@ -14,7 +14,6 @@
 		0A42C6472827ED2700531293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A42C6452827ED2700531293 /* LaunchScreen.storyboard */; };
 		0A42C6522827ED2700531293 /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C6512827ED2700531293 /* MainTabBarViewControllerTests.swift */; };
 		0A42C65C2827ED2700531293 /* BookTDDSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C65B2827ED2700531293 /* BookTDDSampleUITests.swift */; };
-		0A42C65E2827ED2700531293 /* BookTDDSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C65D2827ED2700531293 /* BookTDDSampleUITestsLaunchTests.swift */; };
 		0A42C66B2827EDDA00531293 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C66A2827EDDA00531293 /* NavigationViewController.swift */; };
 		0A42C66D2827F1D200531293 /* SearchBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C66C2827F1D200531293 /* SearchBookViewController.swift */; };
 		0A42C66F2827F1EF00531293 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C66E2827F1EF00531293 /* BookmarkViewController.swift */; };
@@ -72,7 +71,6 @@
 		0A42C6512827ED2700531293 /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
 		0A42C6572827ED2700531293 /* BookTDDSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookTDDSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A42C65B2827ED2700531293 /* BookTDDSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTDDSampleUITests.swift; sourceTree = "<group>"; };
-		0A42C65D2827ED2700531293 /* BookTDDSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTDDSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0A42C66A2827EDDA00531293 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		0A42C66C2827F1D200531293 /* SearchBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookViewController.swift; sourceTree = "<group>"; };
 		0A42C66E2827F1EF00531293 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				0A42C65B2827ED2700531293 /* BookTDDSampleUITests.swift */,
-				0A42C65D2827ED2700531293 /* BookTDDSampleUITestsLaunchTests.swift */,
 			);
 			path = BookTDDSampleUITests;
 			sourceTree = "<group>";
@@ -552,7 +549,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A42C65E2827ED2700531293 /* BookTDDSampleUITestsLaunchTests.swift in Sources */,
 				0A42C65C2827ED2700531293 /* BookTDDSampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

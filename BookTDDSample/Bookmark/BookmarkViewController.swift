@@ -22,10 +22,16 @@ class BookmarkViewController: AppbaseViewController, BookmarkCollectionViewDeleg
     lazy var bookmarkCollectionView = BookmarkCollectionView(frame: .zero, collectionViewLayout: bookmarkCollectinViewFlowLayout).then {
         $0.backgroundColor = .clear
         $0.viewDelegate = self
+        $0.accessibilityLabel = "bookmarkCollectionView"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Global.bookmarks.sink(receiveCompletion: { _ in
+        }, receiveValue: { [weak self] _ in
+            self?.bookmarkCollectionView.reloadData()
+        }).store(in: &cancelBag)
     }
     
     override func setupViews() {
@@ -50,11 +56,3 @@ class BookmarkViewController: AppbaseViewController, BookmarkCollectionViewDeleg
         navigationController?.pushViewController(controller, animated: true)
     }
 }
-
-//extension BookmarkViewController: BookmarkCollectionViewDelegate {
-//    func bookmarkCollectionView(_ collectionView: BookmarkCollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let detailBookViewModel = DetailBookViewModel(book: Global.bookmarks.value[indexPath.row])
-//        let controller = DetailBookViewController(detailBookViewModel: detailBookViewModel)
-//        navigationController?.pushViewController(controller, animated: true)
-//    }
-//}

@@ -16,16 +16,19 @@ class SearchBookViewController: AppbaseViewController {
     var cancelBag = Set<AnyCancellable>()
     
     lazy var searchTextField = UITextField().then {
+        $0.placeholder = "Word"
         $0.borderStyle = .roundedRect
         $0.font = UIFont.systemFont(ofSize: 15)
     }
     
     lazy var searchButton = UIButton().then {
-        $0.setTitle("Search", for: .normal)
+        $0.setTitle("Go", for: .normal)
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
         $0.clipsToBounds = true
         $0.publisher(for: .touchUpInside).sink(receiveValue: { [weak self] _ in
+            self?.view.endEditing(true)
+            
             guard let self = self,
                   let word = self.searchTextField.text, word.count > 0 else { return }
             
@@ -48,6 +51,7 @@ class SearchBookViewController: AppbaseViewController {
     lazy var searchBookCollectionView = SearchBookCollectionView(frame: .zero, collectionViewLayout: searchBookFlowLayout, searchBookViewModel: searchBookViewModel).then {
         $0.backgroundColor = .clear
         $0.viewDelegate = self
+        $0.accessibilityLabel = "searchBookCollectionView"
     }
     
     init(searchBookViewModel: SearchBookProtocol) {

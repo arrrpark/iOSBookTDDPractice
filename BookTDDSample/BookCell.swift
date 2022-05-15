@@ -33,6 +33,7 @@ class BookCell: UICollectionViewCell {
     lazy var isbn13Label = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 12)
         $0.textColor = .black
+        $0.accessibilityLabel = "isbn13LabelInCell"
     }
     
     lazy var priceLabel = UILabel().then {
